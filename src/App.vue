@@ -29,7 +29,7 @@
       <v-btn dark color="pink">Clink me</v-btn>
       
 
-      <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
 
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
@@ -43,6 +43,18 @@
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
     </v-app-bar>
+   
+       <template>
+       <v-carousel>
+      <v-carousel-item
+      v-for="(item,i) in items"
+      :key="i"
+      :src="item.src"
+      reverse-transition="fade-transition"
+      transition="fade-transition"
+      ></v-carousel-item>
+    </v-carousel>
+       </template>
     <v-sheet
       id="scrolling-techniques-5"
       class="overflow-y-auto"
@@ -50,8 +62,8 @@
     >
       <v-container style="height: 1500px;"></v-container>
     </v-sheet>
-
-  </v-card>
+ 
+</v-card>
 </template>
 
 <style>
@@ -62,3 +74,26 @@
     margin: 0 0 16px 16px;
   }
 </style>
+
+<script>
+  export default {
+    data () {
+      return {
+        items: [
+          {
+            src: 'C://Users//deeppatel//cosmic-app//ManchesterUnited.png',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          },
+        ],
+      }
+    },
+  }
+</script>
