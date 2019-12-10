@@ -6,8 +6,9 @@
       color="#fcb69f"
       dark
       shrink-on-scroll
+      prominent
       src="https://picsum.photos/1920/1080?random"
-      scroll-target="#scrolling-techniques-2"
+      scroll-target="#scrolling-techniques"
     >
       <template v-slot:img="{ props }">
         <v-img
@@ -33,7 +34,6 @@
       </v-btn>
     </v-app-bar>
      <!--END : App bar -->
-
 
     <!--START : Navigation drawer code -->
        <v-navigation-drawer
@@ -68,6 +68,7 @@
       </v-list>
     </v-navigation-drawer>
 <!--END: Navigation drawer code  -->
+
 <!--Start: Image Slider  -->
 <v-carousel>
     <v-carousel-item
@@ -80,13 +81,15 @@
   </v-carousel>
   <!--END: Image Slider  -->
     <v-sheet
-      id="scrolling-techniques-2"
+      id="scrolling-techniques"
       class="overflow-y-auto"
-      max-height="600"
+      max-height="1000"
+      background-color="pink lighten-4"
+
     >
-      <v-container style="height: 600px;"></v-container>
+      <v-container style="height: 1000px;"></v-container>
     </v-sheet>
- <v-footer
+    <v-footer
       color="indigo"
       app
     >
@@ -104,33 +107,28 @@
   }
 </style>
 
-<script>
-  export default {
-    data () {
-      return {
-        items: [
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
-        ],
-      }
-    },
-  }
-</script>
+
+<!--script start -->
+
 <script>
   export default {
     data: () => ({
       drawer: false,
       group: null,
+      items: [
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+        }
+      ]
     }),
 
     watch: {
@@ -140,3 +138,10 @@
     },
   }
 </script>
+
+
+
+
+<!-- script end-->
+
+
