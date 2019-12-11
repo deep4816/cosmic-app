@@ -1,6 +1,6 @@
 <template>
   <v-card class="overflow-hidden">
-    <!--START : App bar -->
+  <!--START : App bar -->
     <v-app-bar
       absolute
       color="#fcb69f"
@@ -33,9 +33,9 @@
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
     </v-app-bar>
-     <!--END : App bar -->
-
-    <!--START : Navigation drawer code -->
+  <!--END : App bar -->
+      <!-- <v-container style="height: 1000px;"></v-container> -->
+  <!--START : Navigation drawer code -->
        <v-navigation-drawer
       v-model="drawer"
       absolute
@@ -67,19 +67,21 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-<!--END: Navigation drawer code  -->
+  <!--END: Navigation drawer code  -->
 
-<!--Start: Image Slider  -->
-<v-carousel>
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-      reverse-transition="fade-transition"
-      transition="fade-transition"
-    ></v-carousel-item>
-  </v-carousel>
+  <!--Start: Image Slider  -->
+      <v-carousel>
+          <v-carousel-item
+            v-for="(item,i) in items"
+            :key="i"
+            :src="item.src"
+            reverse-transition="fade-transition"
+            transition="fade-transition"
+          ></v-carousel-item>
+        </v-carousel>
   <!--END: Image Slider  -->
+    
+
     <v-sheet
       id="scrolling-techniques"
       class="overflow-y-auto"
@@ -87,7 +89,7 @@
       background-color="pink lighten-4"
 
     >
-      <v-container style="height: 1000px;"></v-container>
+      <!-- <v-container style="height: 1000px;"></v-container> -->
     </v-sheet>
     <v-footer
       color="indigo"
@@ -108,25 +110,25 @@
 </style>
 
 
-<!--script start -->
+  <!--script start -->
 
-<script>
-  export default {
+    <script>
+    export default {
     data: () => ({
       drawer: false,
       group: null,
       items: [
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+          src: require('C:/Users/deeppatel/cosmic-app/ManchesterUnited.png')           
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          src: require('C:/Users/deeppatel/cosmic-app/Liverpool.jpg')
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          src: require('C:/Users/deeppatel/cosmic-app/Manchester City.png')
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          src: require('C:/Users/deeppatel/cosmic-app/Chelsea.png')
         }
       ]
     }),
@@ -136,12 +138,9 @@
         this.drawer = false
       },
     },
-  }
-</script>
+    }
+    </script>
 
-
-
-
-<!-- script end-->
+  <!-- script end-->
 
 
